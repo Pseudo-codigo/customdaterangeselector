@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #d1d1d1;
+  border-radius: 10px;
+  padding: 5px 10px;
+  min-width: 325px;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+
+  .date-title {
+    font-size: 0.9em;
+  }
+
+  .icon {
+    font-size: 1.3em;
+    color: #0097dc;
+    margin-top: 4px;
+  }
+}

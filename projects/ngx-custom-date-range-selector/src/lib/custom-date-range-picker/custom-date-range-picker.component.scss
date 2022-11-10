@@ -1,0 +1,133 @@
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.55fr;
+  }
+  
+  .column-calendar {
+      display: flex;
+      flex-direction: column;
+      margin-right: 5px;
+  
+      .date-label {
+          font-size: 1em;
+          font-weight: 500;
+          text-align: center;
+          border-radius: 7px;
+          border: 1px solid #0097dc;
+      }
+  }
+  
+  .controls {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    justify-content: center;
+  
+    .item-option {
+      width: 100%;
+      border-radius: 6px;
+      border: 1px solid #a6a6a6;
+      text-align: center;
+      margin: 0px 0px 8.5px 0px;
+      padding: 2px;
+      font-size: 0.9em;
+      font-weight: bold;
+      cursor: pointer;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+  
+    .item-option:hover {
+        transform: scale(1.02);
+    }
+  }
+  
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  
+    .button {
+      width: 48%;
+      border-radius: 6px;
+      text-align: center;
+      margin: 5px 0px 0px 0px;
+      padding: 1px;
+      font-size: 0.9em;
+      font-weight: bold;
+      cursor: pointer;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+  
+    .apply {
+      border: 1px solid #3c4252;
+      background: #3c4252;
+      color: white;
+    }
+  
+    .apply:hover {
+      background: #616e91;
+    }
+  
+    .cancel {
+      border: 1px solid #a6a6a6;
+      // background: #3c4252;
+      // color: white;
+    }
+  }
+  
+  // .mat-calendar {
+  //   background: white;
+  //   height: 368px;
+  // }
+  // .mat-calendar-header {
+  //   padding: 2px 0px 0 0px !important;
+  //   background: #0097dc !important;
+  //   color: white !important;
+  //   border-radius: 10px !important;
+  // }
+  
+  // ::ng-deep .mat-calendar-controls {
+  //   display: flex;
+  //   margin: 2%calc(33% / 7 - 16px);
+  // }
+  
+  // ::ng-deep .mat-calendar-arrow {
+  //   border-top-color: white !important;
+  // }
+  
+  // ::ng-deep .mat-calendar-table-header th {
+  //   text-align: center;
+  //   padding: 0 0 8px 0;
+  //   color: #0097dc;
+  //   font-weight: bold;
+  // }
+  
+  // ::ng-deep .mat-calendar-body-label {
+  //   opacity: 0;
+  // }
+  
+  // ::ng-deep .mat-calendar-body-label[colspan='7'] {
+  //   display: none;
+  // }
+  
+  // ::ng-deep .mat-calendar-body-selected {
+  //   background-color: #0097dc !important;
+  //   color: white;
+  // }
+  
+  ::ng-deep button[disabled] {
+    border: 1px solid transparent !important;
+    background-color: transparent !important;
+    color: #0097dc !important;
+  }
+
+  // ::ng-deep .mat-button-focus-overlay {
+  //   display: none;
+  // }
+
+  
+  

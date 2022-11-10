@@ -1,0 +1,28 @@
+<mat-dialog-content>
+    <div class="main">
+      <div class="column-calendar">
+        <mat-calendar #calendarOne  [maxDate]="maxDate" [(selected)]="dateOne" (selectedChange)="changeDate($event, true)"></mat-calendar>
+        <span *ngIf="dateOne" class="date-label">{{ getFormatDateOne }}</span>
+      </div>
+      <div class="column-calendar">
+        <mat-calendar #calendarTwo [minDate]="minDate" [(selected)]="dateTwo" (selectedChange)="changeDate($event, false)"></mat-calendar>
+        <span *ngIf="dateTwo" class="date-label">{{ getFormatDateTwo }}</span>
+      </div>
+      <div class="controls">
+        <div (click)="selectType(customDateRangeSelectorType.Today, true)"  class="item-option" [ngStyle]="getStyleItemType(customDateRangeSelectorType.Today)">Hoy</div>
+        <div (click)="selectType(customDateRangeSelectorType.Yesterday, true)" [ngStyle]="getStyleItemType(customDateRangeSelectorType.Yesterday)" class="item-option">Ayer</div>
+        <div (click)="selectType(customDateRangeSelectorType.LastSevenDays, true)" [ngStyle]="getStyleItemType(customDateRangeSelectorType.LastSevenDays)" class="item-option">Últimos 7 días</div>
+        <div (click)="selectType(customDateRangeSelectorType.LastWeek, true)" [ngStyle]="getStyleItemType(customDateRangeSelectorType.LastWeek)" class="item-option">Última semana</div>
+        <div (click)="selectType(customDateRangeSelectorType.LastTwoWeeks, true)" [ngStyle]="getStyleItemType(customDateRangeSelectorType.LastTwoWeeks)" class="item-option">Últimas 2 semanas</div>
+        <div (click)="selectType(customDateRangeSelectorType.LastThirtyDays, true)" [ngStyle]="getStyleItemType(customDateRangeSelectorType.LastThirtyDays)" class="item-option">Últimos 30 días</div>
+        <div (click)="selectType(customDateRangeSelectorType.ThisMonth, true)" [ngStyle]="getStyleItemType(customDateRangeSelectorType.ThisMonth)" class="item-option">Este mes</div>
+        <div (click)="selectType(customDateRangeSelectorType.LastMonth, true)" [ngStyle]="getStyleItemType(customDateRangeSelectorType.LastMonth)" class="item-option">Último mes</div>
+        <div [ngStyle]="getStyleItemType(customDateRangeSelectorType.CustomRange)" class="item-option">Rango personalizado</div>
+        <div  class="buttons">
+          <div class="button apply" (click)="outputData()">Aplicar</div>
+          <div class="button cancel" (click)="closePicker()">Cancelar</div>
+        </div>
+      </div>
+    </div>
+  </mat-dialog-content>
+  

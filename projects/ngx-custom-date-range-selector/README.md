@@ -1,24 +1,96 @@
-# NgxCustomDateRangeSelector
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.0.
+# Custom Date Range Selector
 
-## Code scaffolding
+Custom Range Date Selector for Creative Software
 
-Run `ng generate component component-name --project ngxCustomDateRangeSelector` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngxCustomDateRangeSelector`.
-> Note: Don't forget to add `--project ngxCustomDateRangeSelector` or else it will be added to the default project in your `angular.json` file. 
 
-## Build
+## Installation
 
-Run `ng build ngxCustomDateRangeSelector` to build the project. The build artifacts will be stored in the `dist/` directory.
+Install with npm
 
-## Publishing
+```bash
+  npm i ngx-custom-date-range-selector
+```
 
-After building your library with `ng build ngxCustomDateRangeSelector`, go to the dist folder `cd dist/ngx-custom-date-range-selector` and run `npm publish`.
 
-## Running unit tests
+Import module
 
-Run `ng test ngxCustomDateRangeSelector` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+  import { NgxCustomDateRangeSelectorModule } from 'ngx-custom-date-range-selector';
+```
+    
+## Usage
+    
+Use in component
 
-## Further help
+```bash
+  import { ICustomDateRangeSelector, CustomDateRangeSelectorType } from "ngx-custom-date-range-selector";
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+  customDate: ICustomDateRangeSelector = {
+    dateStart: initDate,
+    dateEnd: endDate,
+    typeSelector: CustomDateRangeSelectorType.LastThirtyDays
+  }
+
+  onChange(event: ICustomDateRangeSelector) {
+    this.customDate = event;
+    this.filterDate()
+  }
+```
+    
+Use in HTML
+
+```bash
+    <app-custom-date-range-selector
+        [customDateRangeSelector]="customDate"
+        (change)="onChange($event)">
+
+    </app-custom-date-range-selector>
+```
+
+    
+
+## Properties
+
+#### ICustomDateRangeSelector
+
+
+| Parameter | Type | Description |
+|:-|:-|:-|
+| `dateStart` | `Date` | Initial date |
+| `dateEnd` | `Date` | End date |
+| `typeSelector` | `CustomDateRangeSelectorType` | Selector enum type |
+| `cancel` | `boolean` | show cancel button |
+
+
+#### CustomDateRangeSelectorType
+
+
+| Enum |
+|:-|
+| `Today` |
+| `Yesterday` |
+| `LastSevenDays` |
+| `LastWeek` |
+| `LastTwoWeeks` |
+| `LastThirtyDays` |
+| `ThisMonth` |
+| `LastMonth` |
+| `CustomRange` |
+
+
+## Documentation
+
+[Documentation](https://github.com/Pseudo-codigo/customdaterangeselector)
+
+
+## Tech Stack
+
+Angular 13+, Javascript
+
+
+## Authors
+
+- [@isaacsuazo7](https://github.com/isaacsuazo7)
+- [@Pseudo-codigo](https://github.com/Pseudo-codigo)
+

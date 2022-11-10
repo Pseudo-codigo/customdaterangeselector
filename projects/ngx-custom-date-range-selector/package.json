@@ -1,10 +1,28 @@
 {
   "name": "ngx-custom-date-range-selector",
-  "version": "0.0.1",
+  "version": "0.0.6",
   "peerDependencies": {
-    "@angular/common": "^14.2.0",
-    "@angular/core": "^14.2.0"
+    "@angular/common": "^13.3.9",
+    "@angular/core": "^13.3.9"
   },
+  "description": "Custom Range Date Selector for Creative Software",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pseudo-codigo/customdaterangeselector.git"
+  },
+  "keywords": [
+    "CustomDateRange",
+    "DateRange",
+    "CIT",
+    "Angular",
+    "Javascript"
+  ],
+  "author": "Carlos Morales",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pseudo-codigo/customdaterangeselector/issues"
+  },
+  "homepage": "https://github.com/Pseudo-codigo/customdaterangeselector#readme",
   "dependencies": {
     "tslib": "^2.3.0"
   }
