@@ -34,7 +34,6 @@ Use in component
 
   onChange(event: ICustomDateRangeSelector) {
     this.customDate = event;
-    this.filterDate()
   }
 ```
     
