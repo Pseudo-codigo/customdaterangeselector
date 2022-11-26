@@ -13,22 +13,21 @@ import { CustomAdapter } from './utils/custom-adapter';
 
 registerLocaleData(localeesHN, 'es');
 @NgModule({
-  declarations: [NgxCustomDateRangeSelectorComponent, CustomDateRangePickerComponent],
-  imports: [
-    CommonModule,
-    MatDialogModule,
-    MatNativeDateModule,
-    MatDatepickerModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatIconModule
-  ],
-  providers: [
-    { provide: MAT_DATE_LOCALE, useValue: 'es-HN' },
-    { provide: LOCALE_ID, useValue: 'es' },
-    { provide: DateAdapter, useClass: CustomAdapter }
-  ],
-  exports: [NgxCustomDateRangeSelectorComponent, CustomDateRangePickerComponent],
-  entryComponents: [CustomDateRangePickerComponent]
+    declarations: [NgxCustomDateRangeSelectorComponent, CustomDateRangePickerComponent],
+    imports: [
+        CommonModule,
+        MatDialogModule,
+        MatNativeDateModule,
+        MatDatepickerModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatIconModule
+    ],
+    providers: [
+        { provide: MAT_DATE_LOCALE, useValue: 'es-HN' },
+        { provide: LOCALE_ID, useValue: 'es' },
+        { provide: DateAdapter, useClass: CustomAdapter }
+    ],
+    exports: [NgxCustomDateRangeSelectorComponent, CustomDateRangePickerComponent]
 })
 export class NgxCustomDateRangeSelectorModule {}
