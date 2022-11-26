@@ -1,11 +1,11 @@
 import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewEncapsulation } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import * as moment from 'moment';
+import * as moment from 'moment/moment';
 import { CustomDateRangePickerComponent } from './custom-date-range-picker/custom-date-range-picker.component';
 import { ICustomDateRangeSelector } from './utils/custom-date-range-selector-type.enum';
 
 @Component({
-  selector: 'app-custom-date-range-selector',
+  selector: 'ngx-custom-date-range-selector',
   templateUrl: './ngx-custom-date-range-selector.component.html',
   styleUrls: ['./ngx-custom-date-range-selector.component.scss'],
 })
